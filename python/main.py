@@ -7,13 +7,13 @@ LED_PIN         = 18    # GPIO 18 / PIN 12
 LED_FREQ_HZ     = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_DMA         = 10      # DMA channel to use for generating signal (try 10)
 LED_INVERT      = False   # True to invert the signal (when using NPN transistor level shift)
-LED_BRIGHTNESS  = 200     # Set to 0 for darkest and 255 for brightest
+LED_BRIGHTNESS  = 155     # Set to 0 for darkest and 255 for brightest
 
 # FX
 WAIT_MS = 20
 
 # COLORS
-BLUE = Color(95, 235, 225)
+BLUE = Color(0, 97, 255)
 
 def expectsRain(ring, color, wait_ms=10):
     for t in range (0, 5, 1):
