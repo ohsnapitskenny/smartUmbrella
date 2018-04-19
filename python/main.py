@@ -6,10 +6,9 @@ from random import randint
 LED_COUNT       = 12   # Number of LEDS
 LED_PIN         = 18    # GPIO 18 / PIN 12
 LED_FREQ_HZ     = 800000  # LED signal frequency in hertz (usually 800khz)
-# LED_DMA        = 5      # DMA channel to use for generating signal (try 10)
 LED_DMA         = 10      # DMA channel to use for generating signal (try 10)
 LED_INVERT      = False   # True to invert the signal (when using NPN transistor level shift)
-LED_BRIGHTNESS  = 255     # Set to 0 for darkest and 255 for brightest
+LED_BRIGHTNESS  = 200     # Set to 0 for darkest and 255 for brightest
 
 def loopLed(ring, color, wait_ms):
 
