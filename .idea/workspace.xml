@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5e3876a-1511-446a-91a9-6848e402916e" name="Default" comment="Added NeoPixel class">
+    <list default="true" id="f5e3876a-1511-446a-91a9-6848e402916e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/main.py" afterDir="false" />
     </list>
@@ -26,8 +26,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="607">
+              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -74,18 +74,32 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="smartUmbra" type="cbb8eebc:String" user="smartUmbra" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Default">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="smartUmbra" type="cbb8eebc:String" user="smartUmbra" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="smartUmbra" type="b2602c69:ProjectViewProjectNode" />
               <item name="smartUmbra" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smartUmbra" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartUmbra" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -156,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524156609598</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added colorSwipe">
+      <created>1524161409977</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1524161409977</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -170,7 +191,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32859176" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32859176" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3296875" />
@@ -196,7 +217,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added NeoPixel class" />
     <MESSAGE value="Adjust Readme.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjust Readme.md" />
+    <MESSAGE value="Added colorSwipe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added colorSwipe" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../rpi_ws281x/python/examples/strandtest.py">
@@ -287,8 +309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="607">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
