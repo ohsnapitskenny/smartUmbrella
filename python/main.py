@@ -46,8 +46,8 @@ if __name__ == '__main__':
 
     for t in range (0, LED_COUNT, 1):
         # loopLed(ring, Color(0, 0, 255), 100)
-        colorWipe(ring, Color(0, 0, 255), 10)
-        colorWipe(ring, Color(0, 0, 0), 10)
+        colorWipe(ring, Color(0, 0, 255), 50)
+        colorWipe(ring, Color(0, 0, 0), 50)
 
 
     resetLeds(ring,Color(0,0,0))
