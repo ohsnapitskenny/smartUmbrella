@@ -10,7 +10,7 @@ LED_INVERT      = False   # True to invert the signal (when using NPN transistor
 LED_BRIGHTNESS  = 200     # Set to 0 for darkest and 255 for brightest
 
 # FX
-WAIT_MS = 40
+WAIT_MS = 20
 
 # COLORS
 BLUE = Color(95, 235, 225)
@@ -37,9 +37,6 @@ if __name__ == '__main__':
     ring = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
     ring.begin()
 
-    for t in range (0, 5, 1):
-        colorWipe(ring, Color(0, 0, 255), 50)
-        colorWipe(ring, Color(0, 0, 0), 50)
-
+    expectsRain(ring, BLUE, WAIT_MS)
 
     resetLeds(ring,Color(0,0,0))
