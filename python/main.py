@@ -18,10 +18,10 @@ BLACK   = Color(0, 0, 0)
 
 def expectsRain(ring, color, wait_ms=10):
     for t in range (0, 5, 1):
-        colorWipe(ring, color, WAIT_MS)
-        colorWipe(ring, BLACK, WAIT_MS)
+        colorWipe(ring, color, wait_ms)
+        colorWipe(ring, BLACK, wait_ms)
 
-    breathing(ring, color)
+    breathing(ring, color, wait_ms)
 
 # ColorFX's
 def colorWipe(strip, color, wait_ms=50):
@@ -33,6 +33,10 @@ def colorWipe(strip, color, wait_ms=50):
 def breathing(strip, color, wait_ms=50):
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, color)
+        for t in range(0, 255, 1):
+            strip.setBrightness(t)
+        for t in range(255, 0, -1):
+            strip.setBrightness(t)
     strip.show()
     time.sleep(wait_ms / 1000.0)
 
