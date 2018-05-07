@@ -58,14 +58,14 @@ def stroboscopeEffect(strip, color, wait_ms=50, iterations=10):
 
 
 def breathing(strip, color, wait_ms=50, maxbrightness=255):
-    for j in maxbrightness:
+    for j in range(0, 256):
         strip.setBrightness(j)
         for j in range(strip.numPixels()):
             strip.setPixelColor(j, color)
             strip.show()
             time.sleep(wait_ms / 1000.0)
 
-    for j in maxbrightness:
+    for j in range(0, 256):
         strip.setBrightness(maxbrightness - j)
         for j in range(strip.numPixels()):
             strip.setPixelColor(j, color)
