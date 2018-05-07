@@ -57,20 +57,20 @@ def stroboscopeEffect(strip, color, wait_ms=50, iterations=10):
                 strip.setPixelColor(i + q, 0)
 
 
-def breathing(strip, color, wait_ms=30, maxbrightness=255):
-    for j in range(0, 256):
-        strip.setBrightness(j)
-        for j in range(strip.numPixels()):
-            strip.setPixelColor(j, color)
-            strip.show()
-            time.sleep(wait_ms / 1000)
-
-    for j in range(0, 256):
-        strip.setBrightness(maxbrightness - j)
-        for j in range(strip.numPixels()):
-            strip.setPixelColor(j, color)
-            strip.show()
-            time.sleep(wait_ms / 1000)
+# def breathing(strip, color, wait_ms=30, maxbrightness=255):
+#     for j in range(0, 256):
+#         strip.setBrightness(j)
+#         for j in range(strip.numPixels()):
+#             strip.setPixelColor(j, color)
+#             strip.show()
+#             time.sleep(wait_ms / 1000)
+#
+#     for j in range(0, 256):
+#         strip.setBrightness(maxbrightness - j)
+#         for j in range(strip.numPixels()):
+#             strip.setPixelColor(j, color)
+#             strip.show()
+#             time.sleep(wait_ms / 1000)
 
 def resetLeds(ring, color, wait_ms=10):
     for i in range(ring.numPixels()):
