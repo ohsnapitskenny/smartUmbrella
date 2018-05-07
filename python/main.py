@@ -35,7 +35,7 @@ def expectsRain(ring, color, wait_ms=10):
         colorWipe(ring, color, wait_ms)
         colorWipe(ring, BLACK, wait_ms)
 
-    breathing(ring, color, wait_ms)
+    # breathing(ring, color, wait_ms)
 
 
 # ColorFX's
