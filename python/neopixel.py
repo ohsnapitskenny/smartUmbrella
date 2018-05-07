@@ -113,7 +113,9 @@ class Adafruit_NeoPixel(object):
 			raise RuntimeError('ws2811_render failed with code {0} ({1})'.format(resp, message))
 
 	def setPixelColor(self, n, color):
+		# type: (object, object) -> object
 		"""Set LED at position n to the provided 24-bit color value (in RGB order).
+		:rtype: object
 		"""
 		self._led_data[n] = color
 
