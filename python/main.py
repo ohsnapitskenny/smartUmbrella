@@ -1,3 +1,4 @@
+import signal
 import time
 from neopixel import *
 
@@ -20,6 +21,15 @@ BLACK = Color(0, 0, 0)
 
 continue_reading = True
 
+
+def end_read(signal, frame):
+    global continue_reading
+    print "Ctrl+C captured, ending read."
+    continue_reading = False
+    resetLeds(ring, BLACK)
+    pass
+
+
 def expectsRain(ring, color, wait_ms=10):
     for t in range(0, 5, 1):
         colorWipe(ring, color, wait_ms)
@@ -35,15 +45,17 @@ def colorWipe(strip, color, wait_ms=50):
         strip.show()
         time.sleep(wait_ms / 1000.0)
 
+
 def stroboscopeEffect(strip, color, wait_ms=50, iterations=10):
     for j in range(iterations):
         for q in range(3):
             for i in range(0, strip.numPixels(), 3):
-                strip.setPixelColor(i+q, color)
+                strip.setPixelColor(i + q, color)
             strip.show()
-            time.sleep(wait_ms/1000.0)
+            time.sleep(wait_ms / 1000.0)
             for i in range(0, strip.numPixels(), 3):
-                strip.setPixelColor(i+q, 0)
+                strip.setPixelColor(i + q, 0)
+
 
 # def breathing(strip, color, wait_ms=50):
 #     for i in range(strip.numPixels()):
@@ -59,13 +71,22 @@ def resetLeds(ring, color, wait_ms=10):
         ring.show()
 
 
+signal.signal(signal.SIGINT, end_read)
+
 if __name__ == '__main__':
     ring = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
     ring.begin()
 
     while continue_reading:
+        expectsRain(ring, RED, WAIT_MS)
+        stroboscopeEffect(ring, RED, WAIT_MS)
+        resetLeds(ring, BLACK)
+        time.sleep(5)
+        expectsRain(ring, GREEN, WAIT_MS)
+        stroboscopeEffect(ring, GREEN, WAIT_MS)
+        resetLeds(ring, BLACK)
+        time.sleep(5)
         expectsRain(ring, BLUE, WAIT_MS)
-
-    resetLeds(ring, BLACK)
-
-
+        stroboscopeEffect(ring, BLUE, WAIT_MS)
+        resetLeds(ring, BLACK)
+        time.sleep(5)
