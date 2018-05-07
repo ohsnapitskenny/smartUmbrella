@@ -31,7 +31,7 @@ def end_read(signal, frame):
 
 
 def expectsRain(ring, color, wait_ms=10):
-    for t in range(0, 5, 1):
+    for t in range(0, 3, 1):
         colorWipe(ring, color, wait_ms)
         colorWipe(ring, BLACK, wait_ms)
 
@@ -45,7 +45,6 @@ def colorWipe(strip, color, wait_ms=50):
         strip.show()
         time.sleep(wait_ms / 1000.0)
 
-
 def stroboscopeEffect(strip, color, wait_ms=50, iterations=10):
     for j in range(iterations):
         for q in range(3):
@@ -57,15 +56,15 @@ def stroboscopeEffect(strip, color, wait_ms=50, iterations=10):
                 strip.setPixelColor(i + q, 0)
 
 
-# def breathing(strip, color, wait_ms=30, maxbrightness=255):
-#     for j in range(0, 256):
+# def breathing(strip, color, wait_ms=30):
+#     for j in range(0, 255, 1):
 #         strip.setBrightness(j)
 #         for j in range(strip.numPixels()):
 #             strip.setPixelColor(j, color)
 #             strip.show()
 #             time.sleep(wait_ms / 1000)
 #
-#     for j in range(0, 256):
+#     for j in range(0, 255, 1):
 #         strip.setBrightness(maxbrightness - j)
 #         for j in range(strip.numPixels()):
 #             strip.setPixelColor(j, color)
