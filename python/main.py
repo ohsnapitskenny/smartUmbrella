@@ -35,7 +35,7 @@ def expectsRain(ring, color, wait_ms=10):
         colorWipe(ring, color, wait_ms)
         colorWipe(ring, BLACK, wait_ms)
 
-    # breathing(ring, color, wait_ms)
+    breathing(ring, color, wait_ms)
 
 
 # ColorFX's
@@ -57,13 +57,18 @@ def stroboscopeEffect(strip, color, wait_ms=50, iterations=10):
                 strip.setPixelColor(i + q, 0)
 
 
-# def breathing(strip, color, wait_ms=50):
-#     for i in range(strip.numPixels()):
-#         strip.setPixelColor(i, color)
-#
-#     strip.show()
-#     time.sleep(wait_ms / 1000.0)
+def breathing(strip, color, wait_ms=50, maxbrightness=255):
+    strip.setPixelColor(color)
 
+    for i in maxbrightness:
+        strip.setBrightness(i)
+        strip.show()
+        time.sleep(wait_ms / 1000.0)
+
+    for i in maxbrightness:
+        strip.setBrightness(maxbrightness - i)
+        strip.show()
+        time.sleep(wait_ms / 1000.0)
 
 def resetLeds(ring, color, wait_ms=10):
     for i in range(ring.numPixels()):
